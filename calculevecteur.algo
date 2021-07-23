@@ -1,0 +1,83 @@
+ALGORITHM product
+
+FUNCTION dot_product(v1,v2) : FLOAT
+
+   
+VAR 
+    j,n, i:INTEGER;
+    ps:FLOAT;
+BEGIN
+   FOR i FROM 0 TO n STEP 1  DO
+   FOR j FROM 0 TO n STEP step  DO
+       
+  
+   Write ("donner la valeur  de vecteur v1")
+   read(v1[i])
+    Write ("donner la valeur  de vecteur v2")
+   read(v2[j])
+      END_FOR
+       END_FOR
+      ps:=0;
+      FOR i FROM 0 TO n STEP 1 DO
+      FOR j FROM 0 TO n STEP 1  DO
+          
+        ps:=ps+v1[i]*v2[j]
+        END_FOR
+      END_FOR
+
+    RETURN ps ;
+
+
+END
+
+
+
+
+
+
+
+PROCEDURE dot_product(v1,v2)
+VAR    
+    j,n, i:INTEGER;
+    ps:FLOAT;
+BEGIN
+   FOR i FROM 0 TO n STEP 1  DO
+   FOR j FROM 0 TO n STEP step  DO
+       
+  
+   Write ("donner la valeur  de vecteur v1")
+   read(v1[i])
+    Write ("donner la valeur  de vecteur v2")
+   read(v2[j])
+      END_FOR
+       END_FOR
+      ps:=0;
+      FOR i FROM 0 TO n STEP 1 DO
+      FOR j FROM 0 TO n STEP 1  DO
+          
+        ps:=ps+v1[i]*v2[j]
+        END_FOR
+      END_FOR
+      Write ("le produit scalaire  des vecteurs v1 et v2",ps)
+END
+
+
+
+
+
+
+
+VAR
+ n:INTEGER;
+ A,B:FLOAT;
+v1,v2: ARRAY_OF FLOAT[20];
+BEGIN
+   read(n)
+   read(A)
+   read(B)
+ IF (dot_product(A,B)==null) THEN
+     Write ("Le produit scalaire de deux vecteurs orthogonaux")
+     else 
+     Write("Le produit scalaire de deux vecteurs NON orthogonaux")
+ END_IF 
+END
